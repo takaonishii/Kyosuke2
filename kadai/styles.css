@@ -1,0 +1,23 @@
+nav ul {
+    list-style-type: none;  /* リストのデフォルトのマーカーを削除 */
+    padding: 0;
+    margin: 0;
+    display: flex;  /* フレックスボックスを使用してアイテムを横並びに */
+    justify-content: center;  /* 中央揃え */
+}
+
+nav ul li {
+    margin: 0 15px;  /* アイテム間にスペースを追加 */
+}
+
+nav ul li a {
+    text-decoration: none;  /* デフォルトのリンクの下線を削除 */
+    color: #000;  /* テキストの色を設定 */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;  /* パディングを追加 */
+}
+
+nav ul li a:hover {
+    color: #007BFF;  /* ホバー時にリンクの色を変更 */
+}
