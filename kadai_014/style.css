@@ -1,0 +1,37 @@
+main{
+    font-family: "Arial", "Meiryo", sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.text-blue{
+    color:skyblue ;
+}
+
+.text-red{
+    color: rgb(255, 192, 203);
+}
+
+.h1等間隔{
+    letter-spacing: 1.2em;
+    text-shadow: 2px 2px 5px gray;
+    border-bottom: solid 3px rgb(115, 115, 114);
+    font-family: "Josefin Sans", sans-serif;
+    
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    text-align: center;
+}
+
+.google-fonts{
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  #A p{
+    font-weight: bold;
+  }
