@@ -16,7 +16,7 @@ body{
     color: rgb(255, 192, 203);
 }
 
-.h1等間隔{
+.h1{
     letter-spacing: 1.2em;
     text-shadow: 2px 2px 5px gray;
     border-bottom: solid 3px rgb(115, 115, 114);
@@ -25,7 +25,7 @@ body{
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 .google-fonts{
