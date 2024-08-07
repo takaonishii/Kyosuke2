@@ -111,7 +111,7 @@ $(function () {
     // お問い合わせのチェック
     if ($('#message').val() == '') {
       // エラーあり
-      $('#message').css('background-color', '#f79999');
+  
       error = true;
       message += 'お問い合わせ内容を入力してください。\n';
     } else {
@@ -143,6 +143,20 @@ $(function () {
       // エラーなし
       $('#tel').css('background-color', '#fafafa');
     }
+
+    // 都道府県のチェック
+    console.log("selected value",$('#prefecture').val())
+
+    if($('#prefecture').val()!=''){
+      $('#prefercture').css('background-color', '#f79999');
+      error = true;
+      message += '都道府県を選択してください。\n';
+    } else {
+      // エラーなし
+      $('#furigana').css('background-color', '#fafafa');
+    }
+
+
 
     // 個人情報のチェックボックスのチェック
     if ($('#agree').prop('checked') == false) {

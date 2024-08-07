@@ -455,6 +455,21 @@ p {
     height: 200px;
   }
 
+/* 都道府県 */
+
+  .contact-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-label {
+    margin-right: 40px; /* セレクトボックスとの間にスペースを追加 */
+  }
+  
+  #prefecture {
+    margin-left: 10px;
+  }
+
   /* 個人情報の取り扱い */
   details {
     width: 700px;
