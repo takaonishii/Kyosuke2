@@ -156,6 +156,11 @@ $(function () {
       $('#furigana').css('background-color', '#fafafa');
     }
 
+    $('[name="hobby"]:checked').each(function(){
+      console.log('趣味:' + $(this).val());
+
+    })
+
 
 
     // 個人情報のチェックボックスのチェック
