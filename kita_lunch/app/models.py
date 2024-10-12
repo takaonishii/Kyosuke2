@@ -36,8 +36,6 @@ class Tag(models.Model):
     class Meta:
         verbose_name = 'タグ'
         verbose_name_plural = 'タグ'
-
-    class Meta:
         db_table = 'Tag_info'
 
 from django.db import models
@@ -52,8 +50,6 @@ class Area(models.Model):
     class Meta:
         verbose_name = 'エリア'
         verbose_name_plural = 'エリア'
-
-    class Meta:
         db_table = 'Area_info'
 
 from django.db import models
@@ -76,8 +72,6 @@ class Store(models.Model):
     class Meta:
         verbose_name = '店舗'
         verbose_name_plural = '店舗'
-
-    class Meta:
         db_table = 'Store_info'
 
 
