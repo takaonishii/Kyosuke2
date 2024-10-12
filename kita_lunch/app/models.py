@@ -1,42 +1,42 @@
-from django.db import models
-class UserInfo(models.Model):
-    user_id = models.AutoField(primary_key=True, verbose_name="ユーザID")  # 主キー				
-    first_name = models.CharField(max_length=50, verbose_name="名字")				
-    last_name = models.CharField(max_length=50, verbose_name="名前")				
-    age_group = models.CharField(max_length=2, verbose_name="年代")				
-    gender = models.CharField(max_length=1, verbose_name="性別")				
-    department_cd = models.CharField(max_length=10, verbose_name="所属部署CD")				
+# from django.db import models
+# class UserInfo(models.Model):
+#     user_id = models.AutoField(primary_key=True, verbose_name="ユーザID")  # 主キー				
+#     first_name = models.CharField(max_length=50, verbose_name="名字")				
+#     last_name = models.CharField(max_length=50, verbose_name="名前")				
+#     age_group = models.CharField(max_length=2, verbose_name="年代")				
+#     gender = models.CharField(max_length=1, verbose_name="性別")				
+#     department_cd = models.CharField(max_length=10, verbose_name="所属部署CD")				
 				
-    def __str__(self):				
-        return f"{self.user_id} - {self.last_name} {self.first_name}"				
-    class Meta:
-        db_table = 'user_info'
+#     def __str__(self):				
+#         return f"{self.user_id} - {self.last_name} {self.first_name}"				
+#     class Meta:
+#         db_table = 'user_info'
 
-from django.db import models
+# from django.db import models
 
-class Genre(models.Model):
-    id = models.AutoField(primary_key=True)
+# class Genre(models.Model):
+#     id = models.AutoField(primary_key=True)
     
-    name = models.CharField(max_length=255, unique=True)
+#     name = models.CharField(max_length=255, unique=True)
     
-    def __str__(self):
-        return self.name
-    class Meta:
-        db_table = 'genre_info'
+#     def __str__(self):
+#         return self.name
+#     class Meta:
+#         db_table = 'genre_info'
 
-from django.db import models
+# from django.db import models
 
-class Tag(models.Model):
-    tag_id = models.AutoField(primary_key=True) 
-    tag_name = models.CharField(max_length=100, unique=True) 
+# class Tag(models.Model):
+#     tag_id = models.AutoField(primary_key=True) 
+#     tag_name = models.CharField(max_length=100, unique=True) 
 
-    def __str__(self):
-        return self.tag_name  
+#     def __str__(self):
+#         return self.tag_name  
     
-    class Meta:
-        verbose_name = 'タグ'
-        verbose_name_plural = 'タグ'
-        db_table = 'Tag_info'
+#     class Meta:
+#         verbose_name = 'タグ'
+#         verbose_name_plural = 'タグ'
+#         db_table = 'Tag_info'
 
 from django.db import models
 
@@ -74,6 +74,15 @@ class Store(models.Model):
         verbose_name_plural = '店舗'
         db_table = 'Store_info'
 
+
+class AreaStore(models.Model):
+    area_id = models.PositiveIntegerField(primary_key=True)
+    store_id = models.PositiveIntegerField(primary_key=True)
+
+    class Meta:
+        verbose_name = 'エリア店舗'
+        verbose_name_plural = 'エリア店舗'
+        db_table = 'Area_Store'
 
     
 
