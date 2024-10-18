@@ -76,8 +76,8 @@ class Store(models.Model):
 
 
 class AreaStore(models.Model):
-    area_id = models.PositiveIntegerField(primary_key=True)
-    store_id = models.PositiveIntegerField(primary_key=True)
+    area_id = models.PositiveIntegerField()
+    store_id = models.PositiveIntegerField()
 
     class Meta:
         verbose_name = 'エリア店舗'
