@@ -1,7 +1,12 @@
 from django.shortcuts import render
 
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from .models import Store,Area
 
-class TopView(TemplateView):
+class TopView(ListView):
     template_name = "top.html"
+    model = Area
+
+class StoreListView(ListView):
+     model = Store

@@ -60,10 +60,10 @@ class Store(models.Model):
     address = models.CharField(max_length=300)  # 住所
     phone_number = models.CharField(max_length=15)  # 電話番号
     menu = models.TextField()  # メニュー（複数行テキスト）
-    price = models.DecimalField(max_digits=10, decimal_places=2)  # 金額（少数点付きで保存）
+    price = models.IntegerField()  # 金額（少数点付きで保存）
     photo = models.ImageField(upload_to='store_photos/', blank=True, null=True)  # 写真（画像ファイルのアップロード）
     business_hours = models.CharField(max_length=100)  # 営業時間
-    map_link = models.URLField(max_length=300, blank=True, null=True)  # 地図リンク（Google MapsなどのURL）
+    map_link = models.URLField(max_length=300,verbose_name="地図リンク", blank=True, null=True)  # 地図リンク（Google MapsなどのURL）
     payment_methods = models.CharField(max_length=200)  # 支払い方法（例: 現金、クレジットカードなど）
 
     def __str__(self):

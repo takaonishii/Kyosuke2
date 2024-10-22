@@ -7,6 +7,20 @@
     <title>トップページ</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <h1>エリア一覧</h1>
+         <thead>
+             <tr>
+                 <th>エリア名</th>
+             </tr>
+         </thead>
+         {% for area in object_list %}
+         <tr>
+             <td>{{ area.area_name }}</td>
+         </tr>
+         <tr>
+            <iframe src="https://www.google.com/maps/embed/v1/place?q=マルティスープ&key={AIzaSyA5KE6CMVwnPELIUmcN6776I6R2pUcRPLU}&zoom=15" 
+            width="600" height="450" allowfullscreen="allowfullscreen"></iframe>
+         </tr>
+         {% endfor %}
 </body>
 </html>
