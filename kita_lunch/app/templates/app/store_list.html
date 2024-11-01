@@ -1,28 +1,32 @@
-<!DOCTYPE html>
- <html lang="ja">
- <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>店舗一覧</title>
- </head>
- <body>
-     <h1>店舗一覧</h1>
-     <table border="1">
-         <thead>
-             <tr>
-                 <th>店舗名</th>
-                 <th>住所</th>
-                 <th>価格</th>
-             </tr>
-         </thead>
-         {% for Store in object_list %}
-         <tr>
-             <td>{{ Store.store_name }}</td>
-             <td>{{ Store.address }}</td>
-             <td>{{ Store.price }} 円</td>
-         </tr>
-         {% endfor %}
-     </table>
- </body>
- </html>
+{% extends "base.html" %}
+{% block title %}
+   タイトル
+ {% endblock %}
+   
+   
+   
+{% block content %}
+    
+   <h1>店舗一覧</h1>
+   <table border="1">
+       <thead>
+           <tr>
+               <th>店舗名</th>
+               <th>住所</th>
+               <th>価格</th>
+               <th>地図</th>
+           </tr>
+       </thead>
+       {% for Store in object_list %}
+       <tr>
+           <td>{{ Store.store_name }}</td>
+           <td>{{ Store.address }}</td>
+           <td>{{ Store.price }} 円</td>
+           <td> <iframe src="https://www.google.com/maps/embed/v1/place?q={{ Store.store_name }}&key=AIzaSyA5KE6CMVwnPELIUmcN6776I6R2pUcRPLU&zoom=15"></iframe><td>
+        </tr>
+       {% endfor %}
+   </table>
+       
+
+ {% endblock %}
+

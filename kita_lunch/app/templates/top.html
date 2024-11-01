@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>トップページ</title>
-</head>
-<body>
+{% extends "base.html" %}
+   {% block title %}
+   
+   タイトル
+   
+   {% endblock %}
+   
+   {% block content %}
+    
     <h1>エリア一覧</h1>
          <thead>
              <tr>
@@ -15,12 +15,11 @@
          </thead>
          {% for area in object_list %}
          <tr>
-             <td>{{ area.area_name }}</td>
-         </tr>
-         <tr>
-            <iframe src="https://www.google.com/maps/embed/v1/place?q=マルティスープ&key={AIzaSyA5KE6CMVwnPELIUmcN6776I6R2pUcRPLU}&zoom=15" 
-            width="600" height="450" allowfullscreen="allowfullscreen"></iframe>
+            <td>
+                <button type="button" class="btn btn-primary">{{area.area_name}}</button>
+            </td>
          </tr>
          {% endfor %}
-</body>
-</html>
+
+     {% endblock %}
+    
