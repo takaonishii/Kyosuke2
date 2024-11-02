@@ -76,8 +76,14 @@ class Store(models.Model):
 
 
 class AreaStore(models.Model):
-    area_id = models.PositiveIntegerField()
-    store_id = models.PositiveIntegerField()
+    # area_id = models.PositiveIntegerField()
+    area = models.ForeignKey(Area, on_delete=models.CASCADE)
+
+    # store_id = models.PositiveIntegerField()
+    store = models.ForeignKey(Store, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.area.area_name + "-" + self.store.store_name
 
     class Meta:
         verbose_name = 'エリア店舗'
