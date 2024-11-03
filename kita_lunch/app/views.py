@@ -2,13 +2,13 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
 from .models import Area, Store
 
-import logging
+# import logging
 
-logger = logging.getLogger("django")
+# logger = logging.getLogger("django")
 
-def index(request):
-    logger.info("indexを呼び出し")
-    return HttpResponse(status=200)
+# def index(request):
+#     logger.info("indexを呼び出し")
+#     return HttpResponse(status=200)
 
 class TopView(ListView):
     template_name = "top.html"
@@ -58,7 +58,7 @@ class AreaStoreListView(ListView):
 			
 def get_queryset(self):			
     area_id = self.kwargs["area_id"]
-    logger.info("area_id=", area_id)	
+    # logger.info("area_id=", area_id)	
     stores = Store.objects.filter(
         areastore__area_id = area_id)			
     print(stores)
