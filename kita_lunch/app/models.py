@@ -33,12 +33,10 @@
 #     def __str__(self):
 #         return self.tag_name  
     
-    class Meta:
-        verbose_name = 'タグ'
-        verbose_name_plural = 'タグ'
-
-    class Meta:
-        db_table = 'Tag_info'
+    # class Meta:
+    #     verbose_name = 'タグ'
+    #     verbose_name_plural = 'タグ'
+    #     db_table = 'Tag_info'
 
 from django.db import models
 
