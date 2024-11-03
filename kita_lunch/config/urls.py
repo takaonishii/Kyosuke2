@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from app import views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', views.TopView.as_view(), name="top"),
+    path('', views.TopView.as_view(), name="top"),
     path('Stores/', views.StoreListView.as_view(), name="list"),
-    path('area/<int:area_id>/', views.AreaStoreListView.as_view(), name='area_detail'),
+    path('area/<int:area_id>/', views.area_store_list, name='area_detail'),
+    # path('area/<int:area_id>/', views.AreaStoreListView.as_view(), name='area_detail'),
 ]
 
