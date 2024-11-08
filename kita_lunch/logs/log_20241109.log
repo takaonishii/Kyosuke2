@@ -1,0 +1,179 @@
+2024-11-09 07:35:45,737 [INFO] Watching for file changes with StatReloader
+2024-11-09 07:37:09,739 [INFO] "GET / HTTP/1.1" 200 2225
+2024-11-09 07:37:10,954 [INFO] "GET /area/1/ HTTP/1.1" 200 2468
+2024-11-09 07:37:12,984 [INFO] "GET / HTTP/1.1" 200 2225
+2024-11-09 07:37:13,921 [INFO] "GET /area/2/ HTTP/1.1" 200 2159
+2024-11-09 07:37:14,949 [INFO] "GET / HTTP/1.1" 200 2225
+2024-11-09 07:37:15,763 [INFO] "GET /area/3/ HTTP/1.1" 200 1869
+2024-11-09 07:37:17,114 [INFO] "GET / HTTP/1.1" 200 2225
+2024-11-09 07:37:18,118 [INFO] "GET /area/1/ HTTP/1.1" 200 2468
+2024-11-09 07:37:43,461 [INFO] "GET /admin HTTP/1.1" 301 0
+2024-11-09 07:37:43,474 [INFO] "GET /admin/ HTTP/1.1" 302 0
+2024-11-09 07:37:43,495 [INFO] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4301
+2024-11-09 07:37:43,554 [INFO] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+2024-11-09 07:37:43,554 [INFO] "GET /static/admin/css/login.css HTTP/1.1" 200 958
+2024-11-09 07:37:43,555 [INFO] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+2024-11-09 07:37:43,556 [INFO] "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+2024-11-09 07:37:43,556 [INFO] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+2024-11-09 07:37:43,589 [INFO] "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+2024-11-09 07:37:43,591 [INFO] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+2024-11-09 07:37:51,115 [INFO] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2024-11-09 07:37:51,130 [INFO] "GET /admin/ HTTP/1.1" 200 9837
+2024-11-09 07:37:51,146 [INFO] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+2024-11-09 07:37:51,194 [INFO] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+2024-11-09 07:37:51,194 [INFO] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+2024-11-09 07:37:53,460 [INFO] "GET /admin/app/areastore/ HTTP/1.1" 200 10206
+2024-11-09 07:37:53,477 [INFO] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+2024-11-09 07:37:53,478 [INFO] "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+2024-11-09 07:37:53,479 [INFO] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+2024-11-09 07:37:53,480 [INFO] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+2024-11-09 07:37:53,482 [INFO] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+2024-11-09 07:37:53,483 [INFO] "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+2024-11-09 07:37:53,484 [INFO] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+2024-11-09 07:37:53,489 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-09 07:37:53,492 [INFO] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+2024-11-09 07:37:53,493 [INFO] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+2024-11-09 07:37:53,496 [INFO] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+2024-11-09 07:37:53,502 [INFO] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+2024-11-09 07:37:57,578 [INFO] "GET /admin/app/store/ HTTP/1.1" 200 10650
+2024-11-09 07:37:57,608 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-09 07:38:32,945 [INFO] "GET / HTTP/1.1" 200 2225
+2024-11-09 07:38:54,009 [INFO] "GET /area/2/ HTTP/1.1" 200 2159
+2024-11-09 07:40:53,940 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/app/views.py changed, reloading.
+2024-11-09 07:40:54,248 [INFO] Watching for file changes with StatReloader
+2024-11-09 07:41:20,720 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/urls.py changed, reloading.
+2024-11-09 07:41:20,950 [INFO] Watching for file changes with StatReloader
+2024-11-09 07:42:47,361 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/urls.py changed, reloading.
+2024-11-09 07:42:47,610 [INFO] Watching for file changes with StatReloader
+2024-11-09 07:42:56,262 [ERROR] Internal Server Error: /area/2/
+Traceback (most recent call last):
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/takaonishii/overview/Kyosuke2/kita_lunch/app/views.py", line 53, in area_store_list
+    return render(request, "app/store_list.html", context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'app' is not a registered namespace
+2024-11-09 07:42:56,263 [ERROR] "GET /area/2/ HTTP/1.1" 500 172024
+2024-11-09 07:43:18,678 [ERROR] Internal Server Error: /area/2/
+Traceback (most recent call last):
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/takaonishii/overview/Kyosuke2/kita_lunch/app/views.py", line 53, in area_store_list
+    return render(request, "app/store_list.html", context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'store_detail' with arguments '('',)' not found. 1 pattern(s) tried: ['store/(?P<store_id>[0-9]+)/\\Z']
+2024-11-09 07:43:18,680 [ERROR] "GET /area/2/ HTTP/1.1" 500 173180
+2024-11-09 07:45:36,490 [INFO] "GET /area/2/ HTTP/1.1" 200 2235
+2024-11-09 07:45:38,668 [INFO] "GET /store/3/ HTTP/1.1" 200 1789
+2024-11-09 07:45:48,985 [INFO] "GET / HTTP/1.1" 200 2225
+2024-11-09 07:45:50,533 [INFO] "GET /area/2/ HTTP/1.1" 200 2235
+2024-11-09 07:45:55,605 [INFO] "GET /store/3/ HTTP/1.1" 200 1789
+2024-11-09 07:46:49,646 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/urls.py changed, reloading.
+2024-11-09 07:46:49,913 [INFO] Watching for file changes with StatReloader
+2024-11-09 07:47:35,640 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/app/views.py changed, reloading.
+2024-11-09 07:47:35,896 [INFO] Watching for file changes with StatReloader
+2024-11-09 07:47:40,242 [WARNING] Not Found: /store/3/
+2024-11-09 07:47:40,242 [WARNING] "GET /store/3/ HTTP/1.1" 404 2646
+2024-11-09 07:50:09,806 [INFO] "GET / HTTP/1.1" 200 2225
+2024-11-09 07:50:11,341 [INFO] "GET /area/1/ HTTP/1.1" 200 2622
+2024-11-09 07:50:28,299 [INFO] "GET /area/1/ HTTP/1.1" 200 2624
+2024-11-09 07:50:30,923 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1843
+2024-11-09 07:51:11,895 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1902
+2024-11-09 07:51:13,294 [INFO] "GET /area/1/ HTTP/1.1" 200 2624
+2024-11-09 07:51:14,755 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1902
+2024-11-09 07:51:16,502 [INFO] "GET / HTTP/1.1" 200 2225

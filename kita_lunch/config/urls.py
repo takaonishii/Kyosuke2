@@ -22,6 +22,7 @@ urlpatterns = [
     path('', views.TopView.as_view(), name="top"),
     path('Stores/', views.StoreListView.as_view(), name="list"),
     path('area/<int:area_id>/', views.area_store_list, name='area_detail'),
+    path('store/<int:area_id>/<int:store_id>/', views.store_detail, name='store_detail'),
     # path('area/<int:area_id>/', views.AreaStoreListView.as_view(), name='area_detail'),
 ]
 

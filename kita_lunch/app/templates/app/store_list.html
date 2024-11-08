@@ -7,7 +7,7 @@
    
 {% block content %}
     
-   <h1>店舗一覧</h1>
+   <h1>{{ area.area_name }} 店舗一覧</h1>
    <table border="1">
        <thead>
            <tr>
@@ -17,12 +17,16 @@
                <th>地図</th>
            </tr>
        </thead>
-       {% for Store in object_list %}
+       {% for store in object_list %}
        <tr>
-           <td>{{ Store.store_name }}</td>
-           <td>{{ Store.address }}</td>
-           <td>{{ Store.price }} 円</td>
-           <td> <iframe src="https://www.google.com/maps/embed/v1/place?q={{ Store.store_name }}&key=AIzaSyA5KE6CMVwnPELIUmcN6776I6R2pUcRPLU&zoom=15"></iframe><td>
+           <td>
+            <a href="/store/{{ area.area_id }}/{{store.store_id }}/">
+            {{ store.store_name }}
+            </a>
+            </td>
+           <td>{{ store.address }}</td>
+           <td>{{ store.price }} 円</td>
+           <td> <iframe src="https://www.google.com/maps/embed/v1/place?q={{ store.store_name }}&key=AIzaSyA5KE6CMVwnPELIUmcN6776I6R2pUcRPLU&zoom=15"></iframe><td>
         </tr>
        {% endfor %}
    </table>

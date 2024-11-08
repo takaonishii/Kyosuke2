@@ -46,9 +46,17 @@ INNER JOIN "Area_Store" ON ("Store_info"."store_id" = "Area_Store"."store_id")
 WHERE "Area_Store"."area_id" = area_id
 """
 
-    context = {"object_list": stores}
+    area = Area.objects.get(area_id=area_id)			
+
+    context = {"object_list": stores, "area": area}
 
     return render(request, "app/store_list.html", context)
+
+def store_detail(request, area_id, store_id):
+
+    area = Area.objects.get(area_id=area_id)			
+    store = Store.objects.get(store_id=store_id)
+    return render(request, "app/store_detail.html", {"area": area, "store": store})
 
 # クラスベースのビュー			
 class AreaStoreListView(ListView):

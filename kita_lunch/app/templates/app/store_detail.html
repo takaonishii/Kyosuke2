@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ store.store_name }}
+{% endblock %}
+
+{% block content %}
+    <h1>
+        <a href="/area/{{ area.area_id }}/">
+            {{ area.area_name }} 店舗一覧
+        </a>
+    </h1>
+
+    <h1>{{ store.store_name }}</h1>
+    <p>{{ store.address }}</p>
+    <p>{{ store.price }} 円</p>
+    <iframe src="https://www.google.com/maps/embed/v1/place?q={{ object.store_name }}&key=AIzaSyA5KE6CMVwnPELIUmcN6776I6R2pUcRPLU&zoom=15"></iframe>
+{% endblock %}
