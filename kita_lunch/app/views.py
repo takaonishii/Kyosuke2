@@ -64,12 +64,12 @@ def store_detail(request, area_id, store_id):
 
     area = Area.objects.get(area_id=area_id)			
     store = Store.objects.get(store_id=store_id)
-    # store_tags = StoreTag.objects.filter(store_id=store_id).all()
-    # for store_tag in store_tags:
-    #     print(store_tag.tag.tag_name)
+    store_tags = StoreTag.objects.filter(store_id=store_id).all()
+    for store_tag in store_tags:
+        print(store_tag.tag.tag_name)
 
-    # context = {"area": area, "store": store, "store_tags": store_tags}
-    context = {"area": area, "store": store}
+    context = {"area": area, "store": store, "store_tags": store_tags}
+    # context = {"area": area, "store": store}
 
     print("store:", store)
 
