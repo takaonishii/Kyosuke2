@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
-from .models import Area, Store
+from .models import Area, Store, Tag, StoreTag
 
 # import logging
 
@@ -46,9 +46,17 @@ INNER JOIN "Area_Store" ON ("Store_info"."store_id" = "Area_Store"."store_id")
 WHERE "Area_Store"."area_id" = area_id
 """
 
-    area = Area.objects.get(area_id=area_id)			
+    area = Area.objects.get(area_id=area_id)
 
-    context = {"object_list": stores, "area": area}
+    tags = Tag.objects.all()
+
+    selected_tags_id = request.POST.getlist("tag_id")
+    print("selected_tags_id=", selected_tags_id)
+    context = {
+        "object_list": stores, 
+        "area": area, 
+        "tags": tags, 
+        "selected_tags_id": selected_tags_id}
 
     return render(request, "app/store_list.html", context)
 
@@ -56,7 +64,12 @@ def store_detail(request, area_id, store_id):
 
     area = Area.objects.get(area_id=area_id)			
     store = Store.objects.get(store_id=store_id)
-    return render(request, "app/store_detail.html", {"area": area, "store": store})
+    store_tags = StoreTag.objects.filter(store_id=store_id).all()
+    context = {"area": area, "store": store, "store_tags": store_tags}
+    for store_tag in store_tags:
+        print(store_tag.tag.tag_name)
+
+    return render(request, "app/store_detail.html", context)
 
 # クラスベースのビュー			
 class AreaStoreListView(ListView):
@@ -64,15 +77,25 @@ class AreaStoreListView(ListView):
     template_name = "store_list.html"			
     context_object_name = "stores"			
 			
-def get_queryset(self):			
-    area_id = self.kwargs["area_id"]
-    # logger.info("area_id=", area_id)	
-    stores = Store.objects.filter(
-        areastore__area_id = area_id)			
-    print(stores)
-    return stores
+    def get_queryset(self):			
+        area_id = self.kwargs["area_id"]
+        # logger.info("area_id=", area_id)	
+        stores = Store.objects.filter(
+            areastore__area_id = area_id)			
+        print(stores)
+        return stores
 
-def get_context_data(self, **kwargs):			
-    context = super().get_context_data(**kwargs)			
-    context["area"] = Area.objects.get(area_id=self.kwargs["area_id"])			
-    return context
+    def get_context_data(self, **kwargs):			
+        context = super().get_context_data(**kwargs)			
+        context["area"] = Area.objects.get(area_id=self.kwargs["area_id"])			
+        return context
+
+from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.forms import AuthenticationForm
+class LoginView(LoginView):
+    form_class = AuthenticationForm
+    template_name = "login.html"
+
+class LogoutView(LoginRequiredMixin, LogoutView):
+    template_name = "top.html"

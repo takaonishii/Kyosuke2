@@ -1,0 +1,19 @@
+2024-11-10 17:31:31,971 [INFO] Watching for file changes with StatReloader
+2024-11-10 17:31:33,939 [INFO] "GET / HTTP/1.1" 200 2225
+2024-11-10 17:31:35,341 [INFO] "GET /area/1/ HTTP/1.1" 200 2624
+2024-11-10 17:31:36,766 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1902
+2024-11-10 17:31:39,814 [INFO] "GET /area/1/ HTTP/1.1" 200 2624
+2024-11-10 17:34:19,723 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/urls.py changed, reloading.
+2024-11-10 17:34:20,024 [INFO] Watching for file changes with StatReloader
+2024-11-10 17:35:14,839 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/settings.py changed, reloading.
+2024-11-10 17:35:15,140 [INFO] Watching for file changes with StatReloader
+2024-11-10 17:36:03,426 [INFO] Watching for file changes with StatReloader
+2024-11-10 17:38:20,406 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/settings.py changed, reloading.
+2024-11-10 17:38:20,684 [INFO] Watching for file changes with StatReloader
+2024-11-10 17:39:27,789 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/urls.py changed, reloading.
+2024-11-10 17:39:28,036 [INFO] Watching for file changes with StatReloader
+2024-11-10 17:55:49,327 [INFO] Watching for file changes with StatReloader
+2024-11-10 17:56:17,823 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/settings.py changed, reloading.
+2024-11-10 17:56:18,091 [INFO] Watching for file changes with StatReloader
+2024-11-10 17:56:44,553 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/settings.py changed, reloading.
+2024-11-10 17:56:44,888 [INFO] Watching for file changes with StatReloader

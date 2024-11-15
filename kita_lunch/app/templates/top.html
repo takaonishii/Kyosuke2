@@ -6,21 +6,24 @@
    {% endblock %}
    
    {% block content %}
-    
-    <h1>エリア一覧</h1>
-         <thead>
-             <tr>
-                 <th>エリア名</th>
-             </tr>
-         </thead>
-         {% for area in object_list %}
-         <tr>
-            <td>
-                <a href="{% url 'area_detail' area.area_id %}" ="button" class="btn btn-primary">{{area.area_name}}</a>
-            </td>
-         </tr>
-         {% endfor %}
 
+   <!-- <h2 class="text-center">検索</h2> -->
+   <div class="d-flex justify-content-center mt-5 mb-5">
+        <form method="GET" action="" class="search-box">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="フリワードで検索" name="keyword">
+                <button type="submit" class="btn btn-primary shadow-sm">検索</button> 
+            </div>
+        </form>
+    </div>
+    <h2 class="text-center">エリア一覧</h2>
+    <div class="row justify-content-center mb-4">
+        <div class="col-12 col-md-8">
+        {% for area in object_list %}
+            <a class="btn btn-secondary mb-2" href="{% url 'area_store_list' area.area_id %}" role="button">{{area.area_name}}</a>
+        {% endfor %}
+        </div>
+    </div>
      {% endblock %}
     
  

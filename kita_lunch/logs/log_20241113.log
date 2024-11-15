@@ -1,0 +1,279 @@
+2024-11-13 22:32:45,595 [INFO] Watching for file changes with StatReloader
+2024-11-13 22:36:35,575 [INFO] Watching for file changes with StatReloader
+2024-11-13 22:37:09,811 [INFO] "GET / HTTP/1.1" 200 1760
+2024-11-13 22:37:21,341 [INFO] "GET /admin/ HTTP/1.1" 302 0
+2024-11-13 22:37:21,409 [ERROR] Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 422, in login
+    **self.each_context(request),
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 337, in each_context
+    "available_apps": self.get_app_list(request),
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 536, in get_app_list
+    app_dict = self._build_app_dict(request, app_label)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 478, in _build_app_dict
+    has_module_perms = model_admin.has_module_permission(request)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/admin/options.py", line 611, in has_module_permission
+    return request.user.has_module_perms(self.opts.app_label)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/auth/models.py", line 488, in has_module_perms
+    return _user_has_module_perms(self, module)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/auth/models.py", line 231, in _user_has_module_perms
+    for backend in auth.get_backends():
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/auth/__init__.py", line 38, in get_backends
+    return _get_backends(return_tuples=False)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/auth/__init__.py", line 27, in _get_backends
+    backend = load_backend(backend_path)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/auth/__init__.py", line 21, in load_backend
+    return import_string(path)()
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/auth_backends.py", line 8, in <module>
+    from .utils import filter_users_by_email, filter_users_by_username
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/utils.py", line 15, in <module>
+    from allauth.account.internal import flows
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/internal/__init__.py", line 1, in <module>
+    from allauth.account.internal import flows
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/internal/flows/__init__.py", line 1, in <module>
+    from allauth.account.internal.flows import (
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/internal/flows/email_verification.py", line 9, in <module>
+    from allauth.account.internal.flows.manage_email import emit_email_changed
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/internal/flows/manage_email.py", line 8, in <module>
+    from allauth.account.internal.flows.reauthentication import (
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/internal/flows/reauthentication.py", line 11, in <module>
+    from allauth.account.authentication import get_authentication_records
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/authentication.py", line 1, in <module>
+    from allauth.account.internal.flows.login import (
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/internal/flows/login.py", line 8, in <module>
+    from allauth.account.models import Login
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/models.py", line 23, in <module>
+    class EmailAddress(models.Model):
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/models/base.py", line 134, in __new__
+    raise RuntimeError(
+RuntimeError: Model class allauth.account.models.EmailAddress doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+2024-11-13 22:37:21,411 [ERROR] "GET /admin/login/?next=/admin/ HTTP/1.1" 500 281437
+2024-11-13 22:40:48,798 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/settings.py changed, reloading.
+2024-11-13 22:40:49,154 [INFO] Watching for file changes with StatReloader
+2024-11-13 22:42:04,269 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/settings.py changed, reloading.
+2024-11-13 22:42:04,605 [INFO] Watching for file changes with StatReloader
+2024-11-13 22:42:08,520 [INFO] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4301
+2024-11-13 22:42:13,484 [ERROR] Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: account_emailaddress
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/views/generic/edit.py", line 152, in post
+    if form.is_valid():
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/forms/forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/forms/forms.py", line 196, in errors
+    self.full_clean()
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/forms/forms.py", line 434, in full_clean
+    self._clean_form()
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/forms/forms.py", line 455, in _clean_form
+    cleaned_data = self.clean()
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 252, in clean
+    self.user_cache = authenticate(
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/views/decorators/debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/contrib/auth/__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/auth_backends.py", line 18, in authenticate
+    ret = self._authenticate_by_email(**credentials)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/auth_backends.py", line 56, in _authenticate_by_email
+    for user in filter_users_by_email(email, prefer_verified=True):
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/allauth/account/utils.py", line 346, in filter_users_by_email
+    mails = list(EmailAddress.objects.filter(email=email).select_related("user"))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/takaonishii/miniforge3/envs/tennisle/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: account_emailaddress
+2024-11-13 22:42:13,487 [ERROR] "POST /admin/login/?next=/admin/ HTTP/1.1" 500 240808
+2024-11-13 22:42:43,844 [INFO] Watching for file changes with StatReloader
+2024-11-13 22:42:48,237 [INFO] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2024-11-13 22:42:48,273 [INFO] "GET /admin/ HTTP/1.1" 200 9251
+2024-11-13 22:42:52,912 [INFO] "GET /admin/app/area/ HTTP/1.1" 200 10211
+2024-11-13 22:42:52,946 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:42:52,961 [INFO] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+2024-11-13 22:42:52,962 [INFO] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+2024-11-13 22:42:54,234 [INFO] "GET /admin/app/areastore/ HTTP/1.1" 200 9923
+2024-11-13 22:42:54,258 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:42:55,079 [INFO] "GET /admin/app/store/ HTTP/1.1" 200 9870
+2024-11-13 22:42:55,101 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:42:56,910 [INFO] "GET /admin/account/emailaddress/ HTTP/1.1" 200 11067
+2024-11-13 22:42:56,928 [INFO] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+2024-11-13 22:42:56,933 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:42:58,733 [INFO] "GET /admin/app/area/ HTTP/1.1" 200 10211
+2024-11-13 22:42:58,753 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:42:59,515 [INFO] "GET /admin/app/areastore/ HTTP/1.1" 200 9923
+2024-11-13 22:42:59,541 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:43:00,111 [INFO] "GET /admin/app/store/ HTTP/1.1" 200 9870
+2024-11-13 22:43:00,133 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:43:10,885 [INFO] "GET /admin/app/area/ HTTP/1.1" 200 10211
+2024-11-13 22:43:10,916 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:43:12,710 [INFO] "GET /admin/app/area/add/ HTTP/1.1" 200 10681
+2024-11-13 22:43:12,735 [INFO] "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+2024-11-13 22:43:12,735 [INFO] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+2024-11-13 22:43:12,739 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:43:12,759 [INFO] "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+2024-11-13 22:43:12,760 [INFO] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11921
+2024-11-13 22:43:20,495 [INFO] "POST /admin/app/area/add/ HTTP/1.1" 302 0
+2024-11-13 22:43:20,519 [INFO] "GET /admin/app/area/ HTTP/1.1" 200 11871
+2024-11-13 22:43:20,542 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:43:20,568 [INFO] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+2024-11-13 22:43:22,991 [INFO] "GET /admin/app/area/add/ HTTP/1.1" 200 10681
+2024-11-13 22:43:23,013 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:43:34,026 [INFO] "POST /admin/app/area/add/ HTTP/1.1" 302 0
+2024-11-13 22:43:34,041 [INFO] "GET /admin/app/area/ HTTP/1.1" 200 12178
+2024-11-13 22:43:34,060 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:43:36,034 [INFO] "GET /admin/app/areastore/ HTTP/1.1" 200 9923
+2024-11-13 22:43:36,057 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:43:37,461 [INFO] "GET /admin/app/store/ HTTP/1.1" 200 9870
+2024-11-13 22:43:37,484 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:43:39,622 [INFO] "GET /admin/app/store/add/ HTTP/1.1" 200 15777
+2024-11-13 22:43:39,639 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:44:10,935 [INFO] "POST /admin/app/store/add/ HTTP/1.1" 200 16253
+2024-11-13 22:44:10,965 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:44:34,354 [INFO] "POST /admin/app/store/add/ HTTP/1.1" 302 0
+2024-11-13 22:44:34,371 [INFO] "GET /admin/app/store/ HTTP/1.1" 200 11812
+2024-11-13 22:44:34,401 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:44:36,768 [INFO] "GET /admin/app/store/add/ HTTP/1.1" 200 15777
+2024-11-13 22:44:36,798 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:44:44,092 [INFO] "GET / HTTP/1.1" 200 2068
+2024-11-13 22:44:46,612 [INFO] "GET /area/1/ HTTP/1.1" 200 1869
+2024-11-13 22:44:49,092 [INFO] "GET / HTTP/1.1" 200 2068
+2024-11-13 22:44:50,027 [INFO] "GET /area/2/ HTTP/1.1" 200 1869
+2024-11-13 22:44:50,976 [INFO] "GET / HTTP/1.1" 200 2068
+2024-11-13 22:44:57,791 [INFO] "GET /admin/ HTTP/1.1" 200 10130
+2024-11-13 22:44:59,600 [INFO] "GET /admin/app/areastore/ HTTP/1.1" 200 9923
+2024-11-13 22:44:59,644 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:45:01,114 [INFO] "GET /admin/app/areastore/add/ HTTP/1.1" 200 13373
+2024-11-13 22:45:01,135 [INFO] "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+2024-11-13 22:45:01,137 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:45:05,132 [INFO] "POST /admin/app/areastore/add/ HTTP/1.1" 302 0
+2024-11-13 22:45:05,145 [INFO] "GET /admin/app/areastore/ HTTP/1.1" 200 11538
+2024-11-13 22:45:05,160 [INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 9739
+2024-11-13 22:45:07,920 [INFO] "GET /area/1/ HTTP/1.1" 200 2214
+2024-11-13 22:45:09,825 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1862
+2024-11-16 05:17:41,687 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1862
+2024-11-16 05:17:42,929 [INFO] "GET / HTTP/1.1" 200 2068
+2024-11-16 05:17:44,800 [INFO] "GET /area/1/ HTTP/1.1" 200 2214
+2024-11-16 05:19:28,917 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1862
+2024-11-16 05:19:50,526 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1868
+2024-11-16 05:19:59,638 [INFO] "GET / HTTP/1.1" 200 2068
+2024-11-16 05:20:06,967 [INFO] "GET /area/1/ HTTP/1.1" 200 2214
+2024-11-16 05:20:11,879 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1868
+2024-11-16 05:20:31,236 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1875
+2024-11-16 05:20:58,756 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1899
+2024-11-16 05:21:07,143 [INFO] "GET /area/1/ HTTP/1.1" 200 2214
+2024-11-16 05:21:08,779 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1899
+2024-11-16 05:21:46,614 [INFO] "GET / HTTP/1.1" 200 2068
+2024-11-16 05:24:48,003 [INFO] "GET / HTTP/1.1" 200 2068
+2024-11-16 05:24:48,078 [WARNING] Not Found: /favicon.ico
+2024-11-16 05:24:48,078 [WARNING] "GET /favicon.ico HTTP/1.1" 404 2761
+2024-11-16 05:25:46,150 [INFO] "GET / HTTP/1.1" 200 2554
+2024-11-16 05:26:29,064 [INFO] "GET / HTTP/1.1" 200 2543
+2024-11-16 05:27:18,188 [INFO] "GET / HTTP/1.1" 200 2647
+2024-11-16 05:27:58,485 [INFO] "GET / HTTP/1.1" 200 2704
+2024-11-16 05:27:59,632 [INFO] "GET / HTTP/1.1" 200 2704
+2024-11-16 05:28:12,420 [INFO] "GET / HTTP/1.1" 200 2697
+2024-11-16 05:28:19,904 [INFO] "GET / HTTP/1.1" 200 2704
+2024-11-16 05:30:24,012 [INFO] "GET / HTTP/1.1" 200 2670
+2024-11-16 05:30:25,121 [INFO] "GET / HTTP/1.1" 200 2670
+2024-11-16 05:30:25,988 [INFO] "GET / HTTP/1.1" 200 2670
+2024-11-16 05:30:26,542 [INFO] "GET / HTTP/1.1" 200 2670
+2024-11-16 05:30:37,357 [INFO] "GET / HTTP/1.1" 200 2675
+2024-11-16 05:32:13,992 [INFO] "GET / HTTP/1.1" 200 2686
+2024-11-16 05:32:14,979 [INFO] "GET / HTTP/1.1" 200 2686
+2024-11-16 05:32:15,682 [INFO] "GET / HTTP/1.1" 200 2686
+2024-11-16 05:33:10,408 [INFO] "GET / HTTP/1.1" 200 2726
+2024-11-16 05:33:32,610 [INFO] "GET / HTTP/1.1" 200 2726
+2024-11-16 05:40:11,839 [INFO] "GET / HTTP/1.1" 200 2473
+2024-11-16 05:41:23,383 [INFO] "GET / HTTP/1.1" 200 2492
+2024-11-16 05:41:24,402 [INFO] "GET / HTTP/1.1" 200 2492
+2024-11-16 05:43:07,448 [INFO] "GET / HTTP/1.1" 200 2447
+2024-11-16 05:43:32,812 [INFO] "GET / HTTP/1.1" 200 2461
+2024-11-16 05:44:00,326 [INFO] "GET / HTTP/1.1" 200 2467
+2024-11-16 05:46:49,407 [INFO] "GET / HTTP/1.1" 200 2467
+2024-11-16 05:46:50,708 [INFO] "GET /area/2/ HTTP/1.1" 200 1921
+2024-11-16 05:47:01,417 [INFO] "GET / HTTP/1.1" 200 2467
+2024-11-16 05:51:05,074 [INFO] "GET / HTTP/1.1" 200 2353
+2024-11-16 05:51:50,276 [INFO] "GET / HTTP/1.1" 200 2473
+2024-11-16 05:53:27,525 [INFO] "GET / HTTP/1.1" 200 2481
+2024-11-16 05:54:32,565 [INFO] "GET /area/1/ HTTP/1.1" 200 2280
+2024-11-16 05:55:54,339 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1965
+2024-11-16 05:55:56,089 [INFO] "GET /area/1/ HTTP/1.1" 200 2280
+2024-11-16 05:55:57,822 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1965
+2024-11-16 05:55:59,790 [INFO] "GET /area/1/ HTTP/1.1" 200 2280
+2024-11-16 05:56:06,510 [INFO] "GET /store/1/1/ HTTP/1.1" 200 1965
+2024-11-16 05:56:11,190 [INFO] "GET / HTTP/1.1" 200 2481
+2024-11-16 05:59:31,840 [INFO] /Users/takaonishii/overview/Kyosuke2/kita_lunch/config/settings.py changed, reloading.

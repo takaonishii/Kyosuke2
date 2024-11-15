@@ -8,6 +8,22 @@
 {% block content %}
     
    <h1>{{ area.area_name }} 店舗一覧</h1>
+    <div class="mb-4">
+        <form method="POST" action="{% url 'area_store_list' area.area_id %}">
+            {% csrf_token %}
+            {% for tag in tags %}
+            <label>
+                <input 
+                    type="checkbox" 
+                    name="tag_id" 
+                    value="{{ tag.tag_id }}"
+                    {% if tag.tag_id|stringformat:"s" in selected_tags_id %}checked{% endif %}
+                >{{ tag.tag_name }} 
+            </label>
+           {% endfor %}
+            <input class="btn btn-primary btn-sm" type="submit" value="絞り込み検索">
+            </form>        
+    </div>
    <table border="1">
        <thead>
            <tr>
