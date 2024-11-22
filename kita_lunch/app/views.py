@@ -52,11 +52,31 @@ WHERE "Area_Store"."area_id" = area_id
 
     selected_tags_id = request.POST.getlist("tag_id")
     print("selected_tags_id=", selected_tags_id)
+
+    if selected_tags_id:
+        stores = Store.objects.filter(
+            areastore__area_id=area_id,
+            storetag__tag_id__in=selected_tags_id).distinct()
+    
+    # for store in stores:
+    #     print("store_id:", store.store_id)
+    #     store_tag_count = StoreTag.objects.filter(
+    #         store_id=store.store_id,
+    #         tag_id__in=selected_tags_id).count()
+    #     print("store_tag_count=", store_tag_count)
+
+    #     if store_tag_count == 0:
+    #         pass
+
+
+    # print("stores=", stores)
+
     context = {
         "object_list": stores, 
         "area": area, 
         "tags": tags, 
         "selected_tags_id": selected_tags_id}
+
 
     return render(request, "app/store_list.html", context)
 

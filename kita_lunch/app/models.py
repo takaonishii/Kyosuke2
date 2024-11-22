@@ -107,7 +107,7 @@ class StoreTag(models.Model):
     tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.store.store_name + "-" + self.tag.tag_name
+        return self.store.store_name + "-" + self.tag.tag_name + f"({self.tag.tag_id})"
 
     class Meta:
         verbose_name = '店舗タグ'
